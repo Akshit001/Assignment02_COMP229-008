@@ -1,0 +1,56 @@
+<!--Akshit Narang, #301177669, COMP 229, Section 008-->
+
+<%- include ../partials/header.ejs %>
+<%- include ../partials/main_nav.ejs %>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="nameField">Name</label>
+                    <input type="text" class="form-control"
+                    id="nameField"
+                    placeholder="Enter Full Name"
+                    name="Name" 
+                    value="<%= Contact.Name %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactField">Contact</label>
+                    <input type="text" class="form-control"
+                    id="contactField"
+                    placeholder="Enter Phone Number"
+                    name="Contact" 
+                    value="<%= Contact.Contact %>"
+                    required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailField">Email</label>
+                    <input type="text" class="form-control"
+                    id="emailField"
+                    placeholder="Enter a valid Email Address"
+                    name="Email" 
+                    value="<%= Contact.Email %>"
+                    required>
+                </div>
+
+                <br>
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/contact-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
